@@ -24,8 +24,10 @@ let shuffleOrder = () => {
     clickedOrder = [];
 
     for(let i in order) {
+      setTimeout(() => {
         let elementColor = createColorElement(order[i]);
-        setTimeout(() => {lightColor(elementColor, Number(i) + 1); }, 500);
+        lightColor(elementColor, Number(i) + 1); 
+      }, 500);
     }
 }
 
