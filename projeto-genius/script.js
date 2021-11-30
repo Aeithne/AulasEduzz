@@ -31,9 +31,9 @@ let shuffleOrder = () => {
 
 //acende a proxima cor
 let lightColor = (element, number) => {
-    number = number * 500;
-    sleep(250).then(() => { element.classList.add('selected'); });
-    sleep(250).then(() => { element.classList.remove('selected'); });
+    elm = element;
+    sleep(250).then(() => { elm.classList.add('selected'); });
+    sleep(250).then(() => { elm.classList.remove('selected'); });
 }
 
 //checa se os botoes clicados são os mesmos da ordem gerada no jogo
