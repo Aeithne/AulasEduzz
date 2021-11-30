@@ -12,6 +12,11 @@ const red = document.querySelectorAll('.red');
 const green = document.querySelectorAll('.green');
 const yellow = document.querySelectorAll('.yellow');
 
+// função dormir, com promise.
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 //cria ordem aletoria de cores
 let shuffleOrder = () => {
     let colorOrder = Math.floor(Math.random() * 4);
@@ -27,13 +32,8 @@ let shuffleOrder = () => {
 //acende a proxima cor
 let lightColor = (element, number) => {
     number = number * 500;
-    setTimeout(() => {
-        element.classList.add('selected');
-        setTimeout(() => {
-            element.classList.remove('selected');
-        }, 250);
-    }, number - 250);
-    
+    sleep(250).then(() => { element.classList.add('selected'); });
+    sleep(250).then(() => { element.classList.remove('selected'); });
 }
 
 //checa se os botoes clicados são os mesmos da ordem gerada no jogo
