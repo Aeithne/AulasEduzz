@@ -7,10 +7,10 @@ let score = 0;
 //2 - amarelo
 //3 - azul
 
-const blue = document.querySelector('.blue');
-const red = document.querySelector('.red');
-const green = document.querySelector('.green');
-const yellow = document.querySelector('.yellow');
+const blue = document.querySelectorAll('.blue');
+const red = document.querySelectorAll('.red');
+const green = document.querySelectorAll('.green');
+const yellow = document.querySelectorAll('.yellow');
 
 //cria ordem aletoria de cores
 let shuffleOrder = () => {
