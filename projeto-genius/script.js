@@ -23,12 +23,14 @@ let shuffleOrder = () => {
     order[order.length] = colorOrder;
     clickedOrder = [];
 
-    for(let i in order) {
-      setTimeout(() => {
-        let elementColor = createColorElement(order[i]);
-        lightColor(elementColor, Number(i) + 1); 
+    setTimeout(() => {
+        for(let i in order) {
+          setTimeout(() => {
+            let elementColor = createColorElement(order[i]);
+            lightColor(elementColor, Number(i) + 1); 
+          }, 500);
+        }
       }, 500);
-    }
 }
 
 //acende a proxima cor
