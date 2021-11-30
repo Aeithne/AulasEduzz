@@ -26,13 +26,13 @@ let shuffleOrder = () => {
 
 //acende a proxima cor
 let lightColor = (element, number) => {
-    number = number * 500;
+    //number = number * 500;
     setTimeout(() => {
         element.classList.add('selected');
-    }, number - 250);
+    }, 250);
     setTimeout(() => {
         element.classList.remove('selected');
-    }, 250);
+    }, 500);
 }
 
 //checa se os botoes clicados são os mesmos da ordem gerada no jogo
